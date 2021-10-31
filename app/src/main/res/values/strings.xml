@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GymNerd</string>
+    <string name="btn_stats">Statistics</string>
+    <string name="btn_workouts">Workouts</string>
+    <string name="btn_profile">Profile</string>
+    <string name="btn_workout_to_main">Return To Main Menu</string>
+</resources>

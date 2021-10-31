@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btn_workouts"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/btn_workouts" />
+
+    <Button
+        android:id="@+id/btn_stats"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/btn_stats" />
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/btn_profile" />
+
+</LinearLayout>
