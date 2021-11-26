@@ -22,20 +22,10 @@ import java.math.BigDecimal
 import java.security.AccessController.getContext
 import kotlin.math.roundToInt
 
-var screenHeight: Double = 0.0
-var screenWidth: Double = 0.0
-
 class WorkoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
-
-        val displayMetrics = this.resources.displayMetrics
-
-        screenHeight = displayMetrics.heightPixels.toDouble()
-        screenWidth = displayMetrics.widthPixels.toDouble()
-
-
 
         val rootLinearLayout = findViewById<LinearLayout>(R.id.workout_layout)
 
@@ -43,7 +33,8 @@ class WorkoutActivity : AppCompatActivity() {
 //        My AVD is 1080x2280. The app gets 1080x1977
         val simpleTextView = TextView(this)
         simpleTextView.text = "Hey there is some text here:" +
-                screenWidthUnits(1000) + ", " + screenHeightUnits(250)
+                com.example.gymnerd.mainActivity.screenWidthUnits(1000) + ", " +
+                com.example.gymnerd.mainActivity.screenHeightUnits(250)
 
         rootLinearLayout.addView(simpleTextView)
 
@@ -51,7 +42,8 @@ class WorkoutActivity : AppCompatActivity() {
         val simpleButton = Button(this)
         simpleButton.text = "Create New Workout"
         simpleButton.layoutParams = ViewGroup.LayoutParams(
-            screenWidthUnits(1000), screenHeightUnits(250)
+            com.example.gymnerd.mainActivity.screenWidthUnits(1000),
+            com.example.gymnerd.mainActivity.screenHeightUnits(250)
         )
 
         simpleButton.setOnClickListener {
@@ -78,13 +70,6 @@ class WorkoutActivity : AppCompatActivity() {
         textView1.text = "Text View is Visible!"
 
 
-    }
-
-    fun screenWidthUnits(units: Int): Int {
-        return (units * (screenWidth / 1000.0)).roundToInt()
-    }
-    fun screenHeightUnits(units: Int): Int {
-        return (units * (screenHeight / 1000.0)).roundToInt()
     }
 
 
