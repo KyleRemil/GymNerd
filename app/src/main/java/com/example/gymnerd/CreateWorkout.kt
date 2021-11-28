@@ -1,5 +1,6 @@
 package com.example.gymnerd
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,10 @@ class CreateWorkout : AppCompatActivity() {
         setContentView(R.layout.activity_create_workout)
 
         findViewById<Button>(R.id.btn_add_exercise).setOnClickListener {
+            startActivity(Intent(this,ChooseWorkoutActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_submit_workout).setOnClickListener {
 
         }
 

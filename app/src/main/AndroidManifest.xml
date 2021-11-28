@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymNerd">
         <activity
+            android:name=".ChooseWorkoutActivity"
+            android:exported="true" />
+        <activity
             android:name=".CreateWorkout"
             android:exported="true" />
         <activity
